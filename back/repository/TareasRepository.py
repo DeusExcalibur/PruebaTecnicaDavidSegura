@@ -32,5 +32,5 @@ def completar_tarea(id: str):
   for tarea in lista_tareas:
     if tarea["id"] == id:
       tarea["completed"] = True
-      return tarea
-    return None
+      return True
+  return False
