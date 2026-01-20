@@ -24,23 +24,23 @@ Desde una nueva terminal:
 ```bash
 cd back
 ```
-# Crear entorno virtual
+Crear entorno virtual
 ```bash
 python -m venv venv
 ```
-# Activar entorno (Windows)
+Activar entorno (Windows)
 ```bash
 .\venv\Scripts\activate
 ```
-# Activar entorno (macOS/Linux)
+Activar entorno (macOS/Linux)
 ```bash
 source venv/bin/activate
 ```
-# Instalar dependencias
+Instalar dependencias
 ```bash
 pip install -r requirements.txt
 ```
-# Ejecutar en modo desarrollo
+Ejecutar en modo desarrollo
 ```bash
 fastapi dev main.py
 ```
