@@ -40,7 +40,7 @@ Instalar dependencias
 ```bash
 pip install -r requirements.txt
 ```
-Ejecutar en modo desarrollo
+Ejecutar
 ```bash
 fastapi dev main.py
 ```
@@ -55,6 +55,12 @@ Desde una nueva terminal:
 
 ```bash
 cd front
+```
+Instalar dependencias
+```bash
 npm install
+```
+Ejecutar
+```bash
 npm run dev
 ```
