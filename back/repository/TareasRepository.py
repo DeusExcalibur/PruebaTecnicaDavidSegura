@@ -20,7 +20,6 @@ def agregar_tarea(tarea: CrearTarea):
         "completed": False
     }
   lista_tareas.append(nueva_tarea)
-  print(lista_tareas)
   
 def obtener_todas_tareas():
   return lista_tareas

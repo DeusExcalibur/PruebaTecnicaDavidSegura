@@ -46,7 +46,7 @@ async def filter_tasks(
     "/{id}/complete",
     summary="Completar tarea",
     description=(
-        "Completar una tareas segun el id."
+        "Completar una tarea segun el id."
     ),
     status_code=200,
     responses={

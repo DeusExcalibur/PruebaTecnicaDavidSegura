@@ -14,4 +14,5 @@ python -m venv venv
 venv\Scripts\activate
 fastapi dev main.py
 
-
+Para ejecutar los tests ejecutar:
+python -m pytest tests/TestTareasRepository.py -v
