@@ -1,17 +1,30 @@
-function ListaTareas({ tareas }) {
-  if (tareas.length === 0) return <p>No hay tareas. ¡Relájate!</p>;
+import './ListaTareas.css';
+
+function ListaTareas({ tareas, onCompletar }) {
+  if (tareas.length === 0) return <p className="app-subtitle">No hay tareas. ¡Relájate!</p>;
 
   return (
     <ul className="task-grid">
       {tareas.map((tarea) => (
         <li key={tarea.id} className="task-card">
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <strong>{tarea.title}</strong>
+          <div className="task-card-header">
+            <strong className="task-card-title">{tarea.title}</strong>
             <span className={`badge ${tarea.priority}`}>{tarea.priority}</span>
           </div>
-          <p style={{ color: '#666', fontSize: '14px' }}>{tarea.description}</p>
-          <div style={{ marginTop: '10px', fontSize: '12px' }}>
-            {tarea.completed ? "✅ Completada" : "⏳ Pendiente"}
+          
+          <p className="task-card-description">{tarea.description}</p>
+          
+          <div className="task-card-footer">
+            <span>{tarea.completed ? "✅ Completada" : "⏳ Pendiente"}</span>
+            
+            {!tarea.completed && (
+              <button 
+                className="btn-completar"
+                onClick={() => onCompletar(tarea.id)}
+              >
+                Completar
+              </button>
+            )}
           </div>
         </li>
       ))}

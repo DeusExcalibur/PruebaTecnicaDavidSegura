@@ -1,18 +1,60 @@
 # PruebaTecnicaDavidSegura
 
-#Backend
-Se manejo un backend sencillo donde se tiene models para validación de datos
-Repository que es el diccionario donde se obtienen y modifican los datos junto a los metodos para modificar estos mismos
-y que no se puedan modificar desde otra capa
-Router para las distintas rutas del aplicativo y sus metodos 
-Y el archivo main que llama al router
-Se decidio manejarlo de esta forma y no utilizar services, o un orquestador por motivos de simplicidad y legibilidad
+### Backend (FastAPI)
+- **Models:** Definición y validación de esquemas de datos utilizando Pydantic.
+- **Repository:** Capa de persistencia que actúa como única fuente de verdad. Centraliza el acceso y la manipulación de los datos para evitar efectos secundarios desde otras capas.
+- **Router:** Manejo de rutas y endpoints siguiendo principios REST.
+- **Main:** Punto de entrada que orquesta la configuración de la API.
 
-Para ejecutar el Backend crear una terminal nueva:
+### Frontend (React)
+- **Componentes:** División de la UI en componentes independientes y reutilizables.
+- **Estilos:** Cada componente cuenta con su propio archivo CSS para evitar colisiones de estilos.
+- **Utils/Helpers:** Centralización de las peticiones HTTP para mejorar la legibilidad del código y facilitar el mantenimiento. 
+
+## Instalación y Configuración
+
+1. Clonar el repositorio
+```bash
+git clone https://github.com/DeusExcalibur/PruebaTecnicaDavidSegura.git
+```
+
+2. Backend (Python + FastAPI)
+Desde una nueva terminal:
+
+```bash
 cd back
+```
+# Crear entorno virtual
+```bash
 python -m venv venv
-venv\Scripts\activate
+```
+# Activar entorno (Windows)
+```bash
+.\venv\Scripts\activate
+```
+# Activar entorno (macOS/Linux)
+```bash
+source venv/bin/activate
+```
+# Instalar dependencias
+```bash
+pip install -r requirements.txt
+```
+# Ejecutar en modo desarrollo
+```bash
 fastapi dev main.py
+```
 
-Para ejecutar los tests ejecutar:
+Para ejecutar los tests unitarios:
+```bash
 python -m pytest tests/TestTareasRepository.py -v
+```
+
+3. Frontend (React + Vite)
+Desde una nueva terminal:
+
+```bash
+cd front
+npm install
+npm run dev
+```
