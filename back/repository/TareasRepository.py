@@ -7,7 +7,7 @@ lista_tareas = [
   "title": "Aprender React",
   "description": "Repasar conceptos básicos",
   "priority": "HIGH",
-  "completed": False
+  "completed": True
   },
 ]
 
@@ -21,3 +21,16 @@ def agregar_tarea(tarea: CrearTarea):
     }
   lista_tareas.append(nueva_tarea)
   print(lista_tareas)
+  
+def obtener_todas_tareas():
+  return lista_tareas
+  
+def obtener_tareas_filtradas(valor_filtro: bool):
+  return [tarea for tarea in lista_tareas if tarea["completed"] == valor_filtro]
+
+def completar_tarea(id: str):
+  for tarea in lista_tareas:
+    if tarea["id"] == id:
+      tarea["completed"] = True
+      return tarea
+    return None
