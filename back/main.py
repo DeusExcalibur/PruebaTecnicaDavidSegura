@@ -1,10 +1,7 @@
 from fastapi import FastAPI
-
-from repository.TareasRepository import tareas
+from routers.api.v1.TareasRouter import router as tasks_router
 
 app = FastAPI()
 
-@app.get("/")
-async def root():
-    return {"mensaje": "Hello World"}
+app.include_router(tasks_router)
 
