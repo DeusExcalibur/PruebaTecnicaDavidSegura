@@ -1,10 +1,20 @@
 from fastapi import FastAPI
-
-from repository.TareasRepository import tareas
+from routers.api.v1.TareasRouter import router as tasks_router
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-@app.get("/")
-async def root():
-    return {"mensaje": "Hello World"}
+origins = [
+    "*",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+app.include_router(tasks_router)
 
