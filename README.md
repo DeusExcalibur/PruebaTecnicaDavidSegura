@@ -11,9 +11,9 @@
 - **Estilos:** Cada componente cuenta con su propio archivo CSS para evitar colisiones de estilos.
 - **Utils/Helpers:** Centralización de las peticiones HTTP para mejorar la legibilidad del código y facilitar el mantenimiento. 
 
-## Instalación y Configuración
+## Instalación y Configuración desde CMD o PowerShell
 
-1. Clonar el repositorio
+1. Clonar el repositorio en Visual Studio o tu IDE
 ```bash
 git clone https://github.com/DeusExcalibur/PruebaTecnicaDavidSegura.git
 ```
@@ -28,13 +28,9 @@ Crear entorno virtual
 ```bash
 python -m venv venv
 ```
-Activar entorno (Windows)
+Activar entorno
 ```bash
 .\venv\Scripts\activate
-```
-Activar entorno (macOS/Linux)
-```bash
-source venv/bin/activate
 ```
 Instalar dependencias
 ```bash
